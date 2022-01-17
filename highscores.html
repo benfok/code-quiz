@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Coding Quiz - Highscores</title>
+</head>
+<body>
+    <header>
+        <a href="./index.html" class="header-link">Play Again</a>
+    </header>
+    <main>
+            <h1>Current Highscores</h1>
+            <p>
+                Who is the fastest? Or who got the most right answers? Both are important if you want to claim the highest score. Keep honing your skills and maybe one day you will be top of the pile.
+            </p>
+            <p id="no-scores">
+                No scores have been stored. Play the game to top the leaderboard!
+            </p>
+            <table id="scores-table">
+                <thead>
+                    <tr>
+                        <th>Intials</th>
+                        <th>Score</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+            <div class="button-container">
+                <button id="return-button" onclick="window.location.href='./index.html';">Return To Quiz</button>
+                <button id="reset-scores">Reset Scores</button>
+            </div>
+    </main>
+    <footer>
+        Tidy Lines LLC
+    </footer>
+    <script src="./scripts/highscores.js"></script>
+</body>
+</html>
