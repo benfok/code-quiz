@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Coding Quiz</title>
+</head>
+<body>
+    <header>
+        <a href="./highscores.html" class="header-link">View Highscores</a>
+        <p class="counter">Time: <span class="counter" id="countdown">0</span></p>
+    </header>
+    <main>
+        <div id="start-container">
+            <h1>Coding Quiz Challenge</h1>
+            <p>
+                This quiz game will test your knowledge and your speed. You fill face a randomized gauntlet of 5 JavaScript themed, multiple choice questions. Get an answer wrong and you will lose time from the clock. The time left on the timer becomes your score at the end. Do you have what it takes to be number 1?
+            </p>
+            <button id="start-button">Start Quiz</button>
+        </div>
+        <div id="question-container">
+            <h2 id="question-title">Question</h2>
+            <ol class="answers">
+                <li><button class="answer" id="answer1">Answer</button></li>
+                <li><button class="answer" id="answer2">Answer</button></li>
+                <li><button class="answer" id="answer3">Answer</button></li>
+                <li><button class="answer" id="answer4">Answer</button></li>
+            </ol>
+        </div>
+        <div id="validation">
+            <p id="validation-message"></p>
+        </div>
+        <div id="end-container">
+            <h2>Thanks for Playing!</h2>
+            <p>Your final score from that round is <span id="final-score"></span>.</p>
+            <p>Enter your initials to save your score.</p>
+            <form action="">
+                <label for="user">Initials:</label>
+                <input type="text" id="user" maxlength="3" size="4">
+                <input type="submit" id="submit" value"submit"> 
+            </form>
+        </div>
+    </main>
+    <footer>
+        Tidy Lines LLC
+    </footer>
+    <script src="./scripts/questions.js"></script>
+    <script src="./scripts/quiz.js"></script>
+</body>
+</html>
