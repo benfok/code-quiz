@@ -1,0 +1,148 @@
+:root {
+    --bgcolor: white;
+    --hdrcolor: lightBlue;
+    --linkcolor: purple;
+    --fontcolor: rgba(0, 0, 0, 0.829);
+    --buttoncolor: blue;
+    --tableheader: skyBlue;
+    --tablerow: lightBlue;
+}
+
+body {
+    background-color: var(--bgcolor);
+    color: var(--fontcolor);
+}
+
+header {
+    width: 100%;
+    background-color: var(--hdrcolor);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px 20px 10px 20px;
+    font-size: 22px;
+}
+
+a.header-link {
+    text-decoration: none;
+    color: var(--linkcolor);
+}
+
+.counter {
+    font-weight: bold;
+}
+
+h1 {
+    text-align: center;
+    font-size: 180%;
+    margin: 40px auto;
+}
+
+h2 {
+    text-align: center;
+    font-size: 150%;
+    margin: 40px auto;
+}
+
+main {
+    min-height: 100vh;
+    padding: 0 10vw;
+}
+
+button {
+    font-size: 18px;
+    padding: 5px;
+    background-color: var(--buttoncolor);
+    margin: 8px auto;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#start-button {
+    margin: 40px auto;
+    cursor: pointer;
+}
+
+#return-button, #reset-scores {
+    margin: 30px;
+    cursor: pointer;
+}
+
+#start-container {
+    display: flex;
+    flex-direction: column;
+}
+
+#question-container {
+    display: none;
+}
+
+#validation {
+    border-top: 1px solid grey;
+    margin-top: 20px;
+    padding: 20px 0 0 4vw;
+    display: none;
+}
+
+#end-container {
+    display: none;
+}
+
+#end-container p {
+    line-height: 2;
+}
+
+#submit {
+    font-size: 18px;
+    padding: 5px;
+    background-color: var(--buttoncolor);
+    margin: 20px;
+    border-radius: 5px;
+}
+
+form {
+    padding-top: 20px;
+}
+
+li {
+    text-decoration: none;
+    list-style: none;
+    margin-left: 4vw;
+}
+
+#no-scores {
+    display: none;
+    text-align: center;
+    padding-top: 40px;
+}
+
+table {
+    margin: 30px auto 0 auto;
+}
+
+th {
+    width: 150px;
+    height: 30px;
+    text-align: left;
+    background-color: var(--tableheader);
+    padding-left: 5px;
+}
+
+td {
+    width: 150px;
+    height: 30px;
+    background-color: var(--tablerow);
+    padding-left: 5px;
+}
+
+.button-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+footer {
+    text-align: center;
+    padding: 10px auto;
+    font-size: 100%;
+}
