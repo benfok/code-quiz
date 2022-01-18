@@ -1,11 +1,12 @@
 :root {
-    --bgcolor: white;
-    --hdrcolor: lightBlue;
-    --linkcolor: purple;
-    --fontcolor: rgba(0, 0, 0, 0.829);
-    --buttoncolor: blue;
-    --tableheader: skyBlue;
-    --tablerow: lightBlue;
+    --bgcolor:  #160d27;
+    --hdrcolor: black;
+    --linkcolor: white;
+    --fontcolor: rgba(255, 255, 255, 0.932);
+    --buttoncolor: black;
+    --buttontext: #FFE600;
+    --tableheader: #432874;
+    --tablerow: #6F42C1;
 }
 
 body {
@@ -19,13 +20,19 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 10px 20px 10px 20px;
+    padding: 20px;
     font-size: 22px;
+    border-bottom: solid 1px #6F42C1;
 }
 
 a.header-link {
     text-decoration: none;
     color: var(--linkcolor);
+}
+
+a.header-link:hover,
+a.header-link:focus {
+    color: var(--buttontext);
 }
 
 .counter {
@@ -47,25 +54,49 @@ h2 {
 main {
     min-height: 100vh;
     padding: 0 10vw;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.container {
+    margin-top: 30px;
 }
 
 button {
     font-size: 18px;
-    padding: 5px;
+    padding: 15px;
     background-color: var(--buttoncolor);
+    color: var(--buttontext);
     margin: 8px auto;
     border-radius: 5px;
     cursor: pointer;
+    border: solid 1px var(--buttontext);
 }
 
-#start-button {
+button:hover,
+button:focus,
+button:active,
+button:visited {
+    background-color: var(--buttontext);
+    color: var(--buttoncolor);
+}
+
+button:disabled {
+    color: rgb(59, 59, 59);
+}
+
+#start-button, 
+#submit {
     margin: 40px auto;
     cursor: pointer;
+    padding: 10px
 }
 
-#return-button, #reset-scores {
-    margin: 30px;
+#return-button, 
+#reset-scores {
+    margin: 30px 8px 0 8px;
     cursor: pointer;
+    padding: 10px;
 }
 
 #start-container {
@@ -81,6 +112,8 @@ button {
     border-top: 1px solid grey;
     margin-top: 20px;
     padding: 20px 0 0 4vw;
+    font-weight: bold;
+    font-size: 150%;
     display: none;
 }
 
@@ -92,16 +125,13 @@ button {
     line-height: 2;
 }
 
-#submit {
-    font-size: 18px;
-    padding: 5px;
-    background-color: var(--buttoncolor);
-    margin: 20px;
-    border-radius: 5px;
-}
-
 form {
     padding-top: 20px;
+}
+
+#user {
+    height: 28px;
+    margin-left: 15px;
 }
 
 li {
@@ -141,8 +171,14 @@ td {
     justify-content: center;
 }
 
+.clicked-button {
+    background-color: var(--buttontext);
+    color: var(--buttoncolor);
+}
+
 footer {
     text-align: center;
-    padding: 10px auto;
+    padding: 20px;
     font-size: 100%;
+    background-color: var(--hdrcolor);
 }
