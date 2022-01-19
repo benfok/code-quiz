@@ -62,20 +62,28 @@ main {
     margin-top: 30px;
 }
 
-button {
+button,
+#submit {
     font-size: 18px;
     padding: 15px;
     background-color: var(--buttoncolor);
     color: var(--buttontext);
-    margin: 8px auto;
+    margin: 8px;
     border-radius: 5px;
     cursor: pointer;
     border: solid 1px var(--buttontext);
 }
 
+#submit {
+    padding: 10px;
+    margin: 10px 0 0 20px;
+}
+
 button:hover,
 button:focus,
 button:active,
+#submit:hover,
+#submit:focus,
 button:visited {
     background-color: var(--buttontext);
     color: var(--buttoncolor);
@@ -85,8 +93,7 @@ button:disabled {
     color: rgb(59, 59, 59);
 }
 
-#start-button, 
-#submit {
+#start-button {
     margin: 40px auto;
     cursor: pointer;
     padding: 10px
