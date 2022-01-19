@@ -1,6 +1,5 @@
 var questions = [
     {
-        questionNumber: 1,
         title: "Commonly used data types DO NOT include:",
         choices: [
             "strings",
@@ -11,7 +10,6 @@ var questions = [
         answer: "alerts"
     },
     {
-        questionNumber: 2,
         title: "The condition in an if / else statement is enclosed within ____.",
         choices: [
             "quotes",
@@ -22,7 +20,6 @@ var questions = [
         answer: "parentheses"
     },
     {
-        questionNumber: 3,
         title: "Arrays in JavaScript can be used to store ____.",
         choices: [
             "numbers and strings",
@@ -33,7 +30,6 @@ var questions = [
         answer: "all of the above"
     },
     {
-        questionNumber: 4,
         title: "String values must be enclosed within ____ when being assigned to variables.",
         choices: [
             "commas",
@@ -44,7 +40,6 @@ var questions = [
         answer: "quotes"
     },
     {
-        questionNumber: 5,
         title: "A very useful tool used during development and debugging for printing content to the debugger is:",
         choices: [
             "JavaScript",
@@ -53,5 +48,35 @@ var questions = [
             "console.log"
         ],
         answer: "console.log"
+    },
+    {
+        title: "Which method returns the string starting at the specified position?",
+        choices: [
+            "substr()",
+            "getSubstring()",
+            "slice()",
+            "splice()"
+        ],
+        answer: "substr()"
+    },
+    {
+        title: "Which of the following is not a mouse event?",
+        choices: [
+            "ondblclick",
+            "onmousescroller",
+            "onmouseover",
+            "onmousemove"
+        ],
+        answer: "onmousescroller"
+    },
+    {
+        title: "Which of the following is the method used to add an item to the start of an array?",
+        choices: [
+            "unshift()",
+            "push()",
+            "shift()",
+            "add()"
+        ],
+        answer: "unshift()"
     }
 ];

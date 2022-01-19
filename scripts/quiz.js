@@ -81,19 +81,20 @@ function enableButtons() {
 
 
 document.querySelectorAll('.answer').forEach(element => {element.addEventListener('click', function(event) {
+    event.target.classList.add('clicked-button');
     let chosenAnswer = event.target.textContent;
     let answer = questions[chosenQuestion].answer;
     disableButtons();
     
     if (chosenAnswer === answer) {
         console.log('Correct!');
-        document.getElementById('validation-message').textContent = 'Correct!';
+        document.getElementById('validation-message').textContent = '✅ Correct!';
         document.getElementById('validation').style.display = 'block';
         setTimeout(function() {generateQuestion();}, 1000);
                 
     } else {
         console.log('Wrong!');
-        document.getElementById('validation-message').textContent = 'Wrong!';
+        document.getElementById('validation-message').textContent = '❌ Wrong!';
         document.getElementById('validation').style.display = 'block';
         timeLeft = timeLeft - penalty;
         setTimeout(function() {generateQuestion();}, 1000);
@@ -104,6 +105,10 @@ document.querySelectorAll('.answer').forEach(element => {element.addEventListene
 
 // use the chosenQuestion variable to pull the question from the array and render it to the screen
 function displayQuestion () {
+    
+    if (document.querySelector('.clicked-button')) {
+    document.querySelector('.clicked-button').classList.remove('clicked-button');
+    }
     document.getElementById('validation').style.display = 'none';
     let question = questions[chosenQuestion];
     document.getElementById('question-title').textContent = question.title;
