@@ -104,7 +104,7 @@ document.querySelectorAll('.answer').forEach(element => {element.addEventListene
 
 
 // use the chosenQuestion variable to pull the question from the array and render it to the screen
-function displayQuestion () {
+const displayQuestion = () => {
     
     if (document.querySelector('.clicked-button')) {
     document.querySelector('.clicked-button').classList.remove('clicked-button');
@@ -122,7 +122,7 @@ function displayQuestion () {
 
 
 // call a random question from the question bank each time one is answered, but do not repeat a question
-function generateQuestion() {
+const generateQuestion = () => {
     // first set a limit for the number of questions asked. If reached, end the game
 if (questionLogArray.length === maxQuestions) {
     endGame();
@@ -150,7 +150,7 @@ document.getElementById('start-button').addEventListener('click', function(){
 });
 
 
-function saveScore() {
+const saveScore = () => {
     user.initials = document.getElementById('user').value.toUpperCase();
   
     if (localStorage.getItem('userScores') === null) {
