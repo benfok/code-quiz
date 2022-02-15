@@ -1,9 +1,9 @@
-timerElement = document.getElementById('countdown');
+const timerElement = document.getElementById('countdown');
 
 let chosenQuestion;
 let questionLogArray = [];
-let maxQuestions = 5;
-let penalty = 10;
+const maxQuestions = 5;
+const penalty = 10;
 let timeLeft;
 let user = {
     score: 0,
@@ -14,13 +14,13 @@ let gameOver = false;
 let userScores = [];
 
 // what happens when time runs out
-function timeUp () {
+const timeUp = () => {
     alert('Time is up!');
 };
 
 
 // start from 60 seconds and countdown
-function countdownTimer () {
+const countdownTimer = () => {
     timeLeft = 60;
     let timeInterval = setInterval(function () {
         timerElement.textContent = timeLeft;
@@ -36,7 +36,7 @@ function countdownTimer () {
 };
 
 
-function startQuiz () {
+const startQuiz = () => {
     document.getElementById('start-container').style.display = 'none';
     document.getElementById('question-container').style.display = 'block';
     countdownTimer();
@@ -47,7 +47,7 @@ function startQuiz () {
 
 
 // what happens when all questions are answered
-function endGame () {
+const endGame = () => {
     // set gameOver to true to stop the timer and reset the questionLogArray to blank for the next game
     gameOver = true;
     questionLogArray = [];
@@ -64,15 +64,15 @@ function endGame () {
     document.getElementById('final-score').textContent = user.score;
 };
 
-function disableButtons() {
-    let buttons = document.getElementsByClassName('answer');
+const disableButtons = () => {
+    const buttons = document.getElementsByClassName('answer');
     for (i = 0; i < buttons.length; i++) {
         buttons[i].disabled = true;
     }
 };
 
-function enableButtons() {
-    let buttons = document.getElementsByClassName('answer');
+const enableButtons = () => {
+    const buttons = document.getElementsByClassName('answer');
     for (i = 0; i < buttons.length; i++) {
         buttons[i].disabled = false;
     }
@@ -82,8 +82,8 @@ function enableButtons() {
 
 document.querySelectorAll('.answer').forEach(element => {element.addEventListener('click', function(event) {
     event.target.classList.add('clicked-button');
-    let chosenAnswer = event.target.textContent;
-    let answer = questions[chosenQuestion].answer;
+    const chosenAnswer = event.target.textContent;
+    const answer = questions[chosenQuestion].answer;
     disableButtons();
     
     if (chosenAnswer === answer) {
