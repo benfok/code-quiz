@@ -10,6 +10,12 @@ The deployed website can be found [here](https://benfok.github.io/code-quiz/)
 
 The repository in GitHub is [here](https://github.com/benfok/code-quiz)
 
+## Languages, Skills and Credits
+- HTML
+- CSS
+- JavaScript
+- Google Fonts
+
 ## Screenshot
 Here is a screenshot of my finished page. Some key details and learnings are below.
 
