@@ -1,7 +1,6 @@
-userScores = [];
+let userScores = [];
 
-
-function addScores() {
+const addScores = () => {
     userScores.sort(function (a, b){
         return b.score - a.score;
     });    
@@ -20,7 +19,7 @@ function addScores() {
                 };
 
 
-function renderScores() {
+const renderScores = () => {
     if (localStorage.getItem('userScores') === null) {
         document.getElementById('scores-table').style.display = 'none';
         document.getElementById('no-scores').style.display = 'block';
