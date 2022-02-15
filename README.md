@@ -27,4 +27,5 @@ Here is a screenshot of my finished page. Some key details and learnings are bel
 - Scores are stored within the browser's local storage. They can be cleared using the Reset Scores button on the highscores page. As scores are submitted, initials entered are converted to uppercase, the page is updated and the data sorted by high score and presented immediately back to the user within the highscores table.
 - Negative scores are not possible. Should the time reach 0 the game is ended and the score is 0.
 - Used JSON.stringify and JSON.parse to get and set local storage each time to retain the score history. This allowed me to extract the data and convert to an array of objects, which in turn meant I could easily render and sort the scores within a leaderboard.
+- Create alternative quizzes with different themes
 
